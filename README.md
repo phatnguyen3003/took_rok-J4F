@@ -38,7 +38,7 @@ Cài đặt nhanh (Windows)
 python -m venv .venv; .\.venv\Scripts\Activate.ps1
 ```
 
-2. Cài pip packages (nếu bạn muốn tôi tạo `requirements.txt`, tôi có thể làm):
+
 
 ```powershell
 pip install customtkinter Pillow opencv-python numpy pytesseract pyautogui
@@ -68,13 +68,13 @@ python TOOL_ROK.py
 Lưu ý về OCR và môi trường
 - `pytesseract` chỉ là wrapper; bạn vẫn cần cài Tesseract binary. Nếu `pytesseract` báo lỗi không tìm `tesseract.exe`, kiểm tra PATH hoặc set `pytesseract.pytesseract.tesseract_cmd` trỏ trực tiếp tới `tesseract.exe`.
 
-Ví dụ setting (nếu cần, trong code):
+Ví dụ setting:
 ```python
 import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 ```
 
-Chạy tests (nếu muốn):
+Chạy tests:
 - Repo chứa nhiều file `test_*.py`. Bạn có thể chạy từng file bằng Python hoặc dùng `pytest` nếu muốn tổ chức tests:
 
 ```powershell
@@ -91,16 +91,6 @@ Các file cấu hình/ dữ liệu quan trọng
 - `data/config.json` : cấu hình ứng dụng (đường dẫn, tham số OCR, timeout...)
 - `data/dulieu.json` : dữ liệu lưu trữ người dùng/ hoặc dự liệu mẫu
 
-Cách đóng góp (Contributing)
-- Fork repo, tạo branch mới, sửa/ thêm feature, mở Pull Request.
-- Viết mô tả rõ thay đổi và cách test.
 
-Các việc tôi có thể làm tiếp theo (nếu bạn muốn)
-- Tạo `requirements.txt` tự động liệt kê các gói bên thứ ba.
-- Thêm hướng dẫn cài Tesseract cụ thể cho Windows (bản cài đặt, link trực tiếp).
-- Tạo script cài nhanh `setup.ps1` cho Windows để tạo venv và cài phụ thuộc.
-
-Thông tin liên hệ / Ghi chú
-- Đây là README tóm tắt để bạn bắt đầu nhanh với dự án. Nếu cần README chi tiết hơn (hướng dẫn từng chức năng GUI, mô tả API nội bộ), cho tôi biết chức năng bạn muốn làm rõ.
 
 ---
